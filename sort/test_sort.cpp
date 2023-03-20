@@ -33,8 +33,22 @@ void test2() {
   for (int i : a)
     std::cout << i << ' ';
 }
+void test3() {
+  int n = 20;
+  Sorts sorter(n);
+  std::vector<int> a(n);
+  for (int i = 0; i < n; ++i) {
+    a[i] = std::rand() % 1000;
+  }
+  for (int i : a)
+    std::cout << i << ' ';
+  sorter.heapsort(a);
+  std::cout << '\n';
+  for (int i : a)
+    std::cout << i << ' ';
+}
 
 int main() {
-  test2();
+  test3();
   return 0;
 }
