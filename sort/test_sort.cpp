@@ -50,7 +50,7 @@ void test3() {
 }
 
 void test4() {
-  int n = 15;
+  int n = 30;
 
   pq q(100);
 //  std::vector<int> a(n);
