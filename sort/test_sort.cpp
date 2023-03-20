@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include "sorts.h"
+#include "pq.h"
 void test1() {
   int n = 15;
 
@@ -48,7 +49,25 @@ void test3() {
     std::cout << i << ' ';
 }
 
+void test4() {
+  int n = 15;
+
+  pq q(100);
+//  std::vector<int> a(n);
+  for (int i = 0; i < n; ++i) {
+    int v = std::rand() % 1000;
+    q.push(v);
+    std::cout << v << ' ';
+  }
+  std::cout << '\n';
+  while (!q.empty()) {
+    std::cout << q.top() << ' ';
+    q.pop();
+  }
+}
+
 int main() {
-  test3();
+//  test3();
+  test4();
   return 0;
 }
